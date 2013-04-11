@@ -4,7 +4,7 @@
     <head>
 
         <title>Simon Frost</title>
-	<link rel="icon" type="image/ico" href="img/favicon.ico" />
+	<link rel="icon" type="image/png" href="http://www.simonhfrost.com/img/favicon.png"/>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="Page description" />
@@ -50,14 +50,15 @@
                             </a>
 
                             <a class="brand" href="javascript:void(0)">
-                                <h1 id="logo">Simon Frost</h1>
+                                <h1 id="logo">simonhfrost@gmail.com</h1>
                             </a>
 
                             <div class="nav-collapse collapse">
                                 <ul class="nav pull-right" id="navigation">
                                     <li><a data-nav="scroll" href="#/home" class="active">HOME</a></li>
                                     <li><a data-nav="scroll" href="#/aboutme">ABOUT ME</a></li>
-                                    <li><a data-nav="scroll" href="#/contact">CONTACT</a></li>
+				    <!-- To do: Contact section -->
+                                    <!-- <li><a data-nav="scroll" href="#/contact">CONTACT</a></li> -->
                                 </ul>
                             </div>
                         </div>
@@ -98,33 +99,43 @@
                     <div class="span12 content">
 
                         <ul class="aboutme">
-                            <li class="span4">
-                                <div class="item">
-                                    <a href="http://www.twitter.com/simonhfrost">
-					<img src="img/twitter.png" />
-                                    </a>
-                                    <h3>Twitter</h3>
-				    <p>I tweet rarely</p>
-                                </div>
-                            </li>
-                            <li class="span4">
+                            <li class="span3 pagination-centered">
                                 <div class="item">
                                     <a href="http://www.github.com/simonhfrost">
-                                        <img src="img/twitter.png"/>
+                                        <img src="img/github.png" width="64px" height="64px"/>
+                                        <h3>GitHub</h3>
                                     </a>
-                                    <h3>GitHub</h3>
                                     <p>I push often</p>
                                 </div>
                             </li>
-                            <li class="span4">
+                            <li class="span3 pagination-centered">
+                                <div class="item">
+                                    <a href="http://www.simonhfrost.com/resume">
+                                        <img src="img/resume.png" width="64px" height="64px"/>
+				        <h3>Resume</h3>
+                                    </a>
+                                    <p>I work daily</p>
+                                </div>
+                            </li>
+                            <li class="span3 pagination-centered">
+                                <div class="item">
+                                    <a href="http://www.twitter.com/simonhfrost">
+					<img src="img/twitter.png" width="64px" height="64px"/>
+                                        <h3>Twitter</h3>
+				    </a>
+				    <p>I tweet rarely</p>
+                                </div>
+                            </li>
+                            <li class="span3 pagination-centered">
                                 <div class="item">
                                     <a href="http://www.linkedin.com/in/simonhfrost">
-                                        <img src="img/twitter.png"/>
+                                        <img src="img/linkedin.png" width="64px" height="64px"/>
+                                        <h3>LinkedIn</h3>
                                     </a>
-                                    <h3>LinkedIn</h3>
                                     <p>I update occasionaly</p>
                                 </div>
                             </li>
+			   
                         </ul>
 
                     </div>
@@ -134,7 +145,7 @@
     </section>
 
     <!-- contact -->
-    <section id="contact" class="box">
+    <section id="contact" class="box" style="display: none;">
         <div class="container">
             <div class="panel">
                 <div class="row-fluid">
