@@ -326,12 +326,17 @@ ul
 .portfolio .item a
 {
     width: 100%;
-    height: 240px;
+    height: 260px;
     background-size: cover;
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
     border-radius: 5px;
     display: inline-block;
+}
+
+.portfolio .item a img
+{
+	height: 100%;
 }
 
 .portfolio .item h3
