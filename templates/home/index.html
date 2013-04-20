@@ -6,14 +6,14 @@
         <title>Jacob Duval</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Page description" />
-        <meta name="author" content="Superthe.me" />
+        <meta name="description" content="Jacob Duvals Personal Website" />
+        <meta name="author" content="Jacob Duval" />
         <meta charset="utf-8" />
 
-        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
-        <link href="css/font-awesome.min.css" rel="stylesheet" media="screen" />
-        <link href="css/flexslider.css" rel="stylesheet" media="screen" />
-        <link href="css/style.min.css" rel="stylesheet" media="screen" />
+        <link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet" media="screen" />
+        <link href="{{ STATIC_URL }}css/font-awesome.min.css" rel="stylesheet" media="screen" />
+        <link href="{{ STATIC_URL }}css/flexslider.css" rel="stylesheet" media="screen" />
+        <link href="{{ STATIC_URL }}css/style.min.css" rel="stylesheet" media="screen" />
 
         <!--[if IE 7]>
         <link href="css/font-awesome-ie7.css" rel="stylesheet">
@@ -102,7 +102,7 @@
                             <li class="span3 pagination-centered">
                                 <div class="item">
                                     <a href="http://www.github.com/jladuval">
-                                        <img src="img/github.png" width="64px" height="64px"/>
+                                        <img src="{{ STATIC_URL }}img/github.png" width="64px" height="64px"/>
                                         <h3>GitHub</h3>
                                     </a>
                                     <p>I push often</p>
@@ -111,7 +111,7 @@
                             <li class="span3 pagination-centered">
                                 <div class="item">
                                     <a href="resume/index.html">
-                                        <img src="img/resume.png" width="64px" height="64px"/>
+                                        <img src="{{ STATIC_URL }}img/resume.png" width="64px" height="64px"/>
 				        <h3>Resumé</h3>
                                     </a>
                                     <p>I work most days</p>
@@ -120,7 +120,7 @@
 							 <li class="span3 pagination-centered">
                                 <div class="item">
                                     <a href="http://www.linkedin.com/pub/jacob-duval/47/26a/816">
-                                        <img src="img/linkedin.png" width="64px" height="64px"/>
+                                        <img src="{{ STATIC_URL }}img/linkedin.png" width="64px" height="64px"/>
                                         <h3>LinkedIn</h3>
                                     </a>
                                     <p>I network occasionally</p>
@@ -129,7 +129,7 @@
                             <li class="span3 pagination-centered">
                                 <div class="item">
                                     <a href="http://www.twitter.com/jacobduval">
-									<img src="img/twitter.png" width="64px" height="64px"/>
+									<img src="{{ STATIC_URL }}img/twitter.png" width="64px" height="64px"/>
 														<h3>Twitter</h3>
 									</a>
 									<p>I tweet rarely</p>
@@ -162,7 +162,7 @@
 									<h3>Strike a Prose</h3>
                                     <p>Node.js/MongoDB</p>
                                     <a href="http://strikeapro.se" class="lightbox_trigger">
-                                        <img src="img/strikeaprose.PNG" alt="" />
+                                        <img src="{{ STATIC_URL }}img/strikeaprose.PNG" alt="" />
                                     </a>
                                     
                                 </div>
@@ -172,7 +172,7 @@
 									<h3>Fluffy Link</h3>
                                     <p>MVC4/EF</p>
                                     <a href="http://fluffylink.com" class="lightbox_trigger">
-                                        <img src="img/fluffylink.PNG" alt="" />
+                                        <img src="{{ STATIC_URL }}img/fluffylink.PNG" alt="" />
                                     </a>                                    
                                 </div>
                             </li>
@@ -182,7 +182,7 @@
 									<h3>Find The</h3>
                                     <p>Node.js/MongoDB</p>
                                     <a href="http://findthe.me" class="lightbox_trigger">
-                                        <img src="img/findthe.PNG" alt="" />
+                                        <img src="{{ STATIC_URL }}img/findthe.PNG" alt="" />
                                     </a>                                    
                                 </div>
                             </li>           
@@ -193,7 +193,7 @@
 									<h3>Shapeless</h3>
                                     <p>Javascript</p>
                                     <a href="http://shapeless-comic.com" class="lightbox_trigger">
-                                        <img src="img/shapeless.PNG" alt="" />
+                                        <img src="{{ STATIC_URL }}img/shapeless.PNG" alt="" />
                                     </a>                                    
                                 </div>
                             </li>     
@@ -202,7 +202,7 @@
 									<h3>Bizcrowd</h3>
                                     <p>MVC4/EF</p>
                                     <a href="http://bizcrowd.com" class="lightbox_trigger">
-                                        <img src="img/bizcrowd.PNG" alt="" />
+                                        <img src="{{ STATIC_URL }}img/bizcrowd.PNG" alt="" />
                                     </a>                                    
                                 </div>
                             </li>       							
@@ -232,14 +232,14 @@
                                 <div id="map_canvas"></div>
                             </div>
                             <div class="span6">
-                                <form>
+                                <form action="/SendEmail/">
                                     <fieldset>
                                         <div class="control-group">
                                             <div class="controls">
-                                                <input class="span12" type="text" placeholder="Your Email">
+                                                <input class="span12" name="email" type="text" placeholder="Your Email">
                                             </div>
                                             <div class="controls">
-                                                <textarea class="span12" id="textarea" rows="10" placeholder="Your Message"></textarea>
+                                                <textarea class="span12" name="message" id="textarea" rows="10" placeholder="Your Message"></textarea>
                                             </div>
                                             <button class="btn btn-default">Send Message</button>
                                         </div>
@@ -256,15 +256,15 @@
     <div style="display: none;" id="lightbox"><img id="bigimg" src="" /></div>
 
     <!-- scripts -->
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/signals.min.js"></script>
-    <script type="text/javascript" src="js/crossroads.min.js"></script>
-    <script type="text/javascript" src="js/hasher.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/signals.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/crossroads.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/hasher.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.flexslider-min.js"></script>
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-    <script type="text/javascript" src="js/googlemaps.js"></script>
-    <script type="text/javascript" src="js/theme.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/googlemaps.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/theme.js"></script>
 
 </body>
 
