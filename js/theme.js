@@ -30,7 +30,9 @@ readyState(function()
 
         $('#navigation a[href="#/' + page + '"]').addClass('active');
 
-        $('html, body').animate({ scrollTop: $('#' + page).offset().top }, 800);
+        scroll = false;
+
+        $('html, body').animate({ scrollTop: $('#' + page).offset().top }, 800, function(){ scroll = true; });
     }
 
     /**
@@ -47,6 +49,15 @@ readyState(function()
     function introPos()
     {
         $('#intro').css({'margin-top':( ($('.box:first').height() /2) - $('#header').height() - ($('#intro').height() /2) )});
+    }
+
+    /**
+     * Set Hash silently
+     */
+    function setHashSilently(hash){
+        hasher.changed.active = false;
+        hasher.setHash(hash);
+        hasher.changed.active = true;
     }
 
     /**
@@ -78,6 +89,24 @@ readyState(function()
      */
     $(window).scroll(function()
     {
+        var self = this;
+        
+        if(scroll)
+        {
+            $('.box').each(function()
+            {
+                    if(($(self).scrollTop() + $('#header').height()) >= $(this).position().top && ($(self).scrollTop() + $('#header').height()) < ($(this).position().top + $(this).height()))
+                    {
+                            $("#navigation a[href='#/"+$(this).attr('id') + "']").addClass('active');
+                            setHashSilently($(this).attr('id'));
+                    }
+                    else
+                    {
+                            $("#navigation a[href='#/"+$(this).attr('id') + "']").removeClass('active');
+                    }
+            });
+        }
+
         if ($(this).scrollTop() > 100)
         {
             $('#back-top').fadeIn();
@@ -132,7 +161,7 @@ readyState(function()
     /**
      * Vegas background image slider
      */
-    $.vegas('slideshow',
+    /*$.vegas('slideshow',
     {
         delay: 10000,
         backgrounds: [
@@ -146,7 +175,7 @@ readyState(function()
             { src: 'img/bg8.jpg', fade: 2000 },
             { src: 'img/bg9.jpg', fade: 2000 }
         ]
-    })('overlay');
+    })('overlay');*/
 
     /**
      * Lightbox

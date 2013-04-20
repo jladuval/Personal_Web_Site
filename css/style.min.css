@@ -25,6 +25,32 @@ body
     background: #000;
 }
 
+#background
+{
+    background-attachment: fixed;
+    background-image: url("../img/bg1.jpg");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;
+    min-width: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: -2;
+}
+
+#overlay
+{
+    background-attachment: fixed;
+    background-image: url("../img/overlays/02.png");
+    background-position: left top;
+    min-height: 100%;
+    min-width: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: -1;
+}
+
 h1, h2, h3
 {
     font-family: 'Open Sans', sans-serif;
