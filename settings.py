@@ -49,6 +49,11 @@ STATICFILES_DIRS = (
     os.path.join(SITE_ROOT, 'static'),
     )
 
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'jladuval@gmail.com'
+EMAIL_HOST_PASSWORD = ''
 
 # List of finder classes that know how to find static files in
 # various locations.

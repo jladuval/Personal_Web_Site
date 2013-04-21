@@ -9,8 +9,9 @@ admin.autodiscover()
 urlpatterns = patterns('',
 
     url(r'^home/', 'home.views.index', name='Jacob Duval'),
+    
+    url(r'^(?i)SendEmail', 'home.views.SendEmail'),
     url(r'^', 'home.views.index', name='Jacob Duval'),
-    url(r'^(?i)SendEmail', 'Home.views.SendEmail'),
 
     #robots
     (r'^robots\.txt$', lambda r: HttpResponse("User-agent: *\nDisallow: /", mimetype="text/plain")),

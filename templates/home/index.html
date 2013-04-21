@@ -232,14 +232,15 @@
                                 <div id="map_canvas"></div>
                             </div>
                             <div class="span6">
-                                <form action="/SendEmail/">
+                                <form action="/SendEmail/" method="POST">
+                                    {% csrf_token %}
                                     <fieldset>
                                         <div class="control-group">
                                             <div class="controls">
-                                                <input class="span12" name="email" type="text" placeholder="Your Email">
+                                                <input class="span12" name="Email" id="Email" type="text" placeholder="Your Email">
                                             </div>
                                             <div class="controls">
-                                                <textarea class="span12" name="message" id="textarea" rows="10" placeholder="Your Message"></textarea>
+                                                <textarea class="span12" name="Message" id="Message textarea" rows="10" placeholder="Your Message"></textarea>
                                             </div>
                                             <button class="btn btn-default">Send Message</button>
                                         </div>
