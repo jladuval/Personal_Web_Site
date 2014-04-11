@@ -50,9 +50,9 @@ STATICFILES_DIRS = (
     )
 
 EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST = 'smtp.sendgrid.net'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'jladuval@gmail.com'
+EMAIL_HOST_USER = 'azure_1b219be9150eadf93fa15c687b53c8f8@azure.com'
 EMAIL_HOST_PASSWORD = ''
 
 # List of finder classes that know how to find static files in
